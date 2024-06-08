@@ -1,9 +1,13 @@
 package types
 
+import (
+	"github.com/google/uuid"
+)
+
 type Order struct {
-	id string  `json:"id"`
-	customerId string `json:"customerId"`
-	productIds []string `json:"productsIds"`
-	price Money `json:"price"`
-	date string `json:"date"`
+	ID         uuid.UUID `json:"id"`
+	CustomerID string    `json:"customerId"`
+	ProductIDs []string  `json:"productsIds"`
+	Price      Money     `json:"price"`
+	Date       string    `json:"date"`
 }
