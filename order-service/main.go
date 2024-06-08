@@ -12,6 +12,6 @@ func main() {
 func initRouter() {
 	router := gin.Default()
 	rest.SetupOrderRouter(router)
-	const serverPort = "3000"
+	const serverPort = "8080"
 	router.Run(":" + serverPort)
 }
