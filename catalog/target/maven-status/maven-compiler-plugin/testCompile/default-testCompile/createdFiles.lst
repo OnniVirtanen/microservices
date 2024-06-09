@@ -1,0 +1,3 @@
+com\onnivirtanen\inventory\domain\usecases\InventoryServiceImplTest.class
+com\onnivirtanen\inventory\InventoryApplicationTests.class
+com\onnivirtanen\inventory\domain\usecases\TestData.class
