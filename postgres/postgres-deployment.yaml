@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-service
+  template:
+    metadata:
+      labels:
+        app: postgres-service
+    spec:
+      containers:
+      - name: postgres-service
+        image: postgres:14-alpine
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_PASSWORD
+          value: postgres  # Replace with your desired password
+        # Optionally set the POSTGRES_DB and POSTGRES_USER if needed
+        - name: POSTGRES_DB
+          value: postgres  # Replace with your desired database name
+        - name: POSTGRES_USER
+          value: postgres  # Replace with your desired username
