@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: catalog-service
-        image: inventory-service:latest
+        image: catalog-service:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
